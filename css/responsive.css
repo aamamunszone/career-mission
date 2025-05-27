@@ -1,0 +1,166 @@
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-bottom: 50px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 13px 20px;
+  }
+
+  .btn:hover {
+    opacity: 100%;
+  }
+
+  /* Blog Section */
+  .blog-title {
+    margin: 0px 80px;
+  }
+
+  .blog-content {
+    padding: 0px;
+  }
+
+  .blog-content-desc {
+    width: 60%;
+  }
+
+  .blog-content-desc-title h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+
+  .blog-content-desc-title p {
+    font-size: 14px;
+  }
+
+  .blog-content-img {
+    width: 40%;
+  }
+
+  .blog-content-img img {
+    width: 100%;
+  }
+
+  /* Inspiration Section */
+  .inspiration-title {
+    margin: 0px 80px;
+  }
+
+  .inspiration-content {
+    width: 720px;
+    height: 480px;
+  }
+
+  /* Target Section */
+
+  .target-title {
+    margin: 0px 80px;
+  }
+
+  .target-card {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-content h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  /* Footer Section */
+  footer {
+    padding: 24px 80px;
+  }
+}
+
+/* For Tablet */
+@media screen and (max-width: 768px) {
+  .container {
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .btn:hover {
+    opacity: 100%;
+  }
+
+  /* Blog Section */
+
+  .blog-content {
+    flex-direction: column-reverse;
+
+    .blog-title {
+      margin: 0px 80px;
+    }
+
+    .blog-content {
+      padding: 0px;
+    }
+
+    .blog-content-desc {
+      width: 60%;
+    }
+
+    .blog-content-desc-title h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .blog-content-desc-title p {
+      font-size: 14px;
+    }
+
+    .blog-content-img {
+      width: 40%;
+    }
+
+    .blog-content-img img {
+      width: 100%;
+    }
+
+    /* Inspiration Section */
+    .inspiration-title {
+      margin: 0px 80px;
+    }
+
+    .inspiration-content {
+      border-radius: 16px;
+      padding: 32px;
+      width: 480px;
+      height: 320px;
+      text-align: center;
+    }
+
+    .inspiration-content iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+    }
+
+    /* Target Section */
+
+    .target-title {
+      margin: 0px 80px;
+    }
+
+    .target-card {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-content h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    /* Footer Section */
+    footer {
+      padding: 24px 80px;
+    }
+  }
+}
