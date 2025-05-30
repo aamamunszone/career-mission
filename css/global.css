@@ -1,0 +1,149 @@
+/* ==========================================
+   Career Mission Project - Global CSS Setup
+   Author: Abdullah Al Mamun (aamamunszone)
+   Purpose: Clean, scalable, maintainable styles
+   ========================================== */
+
+/* Universal Reset + Box Model */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Variables for theming & reuse */
+:root {
+  --color-primary: #1a73e8;
+  --color-secondary: #0f4c81;
+  --color-accent: #ff5722;
+  --color-bg: linear-gradient(to bottom right, #e6e6fa, #b8e7fa);
+  --color-text: #000000;
+  --color-text-light: #666666;
+
+  --font-family-base: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+
+  --border-radius-base: 0.5rem;
+
+  --transition-fast: 0.1s ease-in-out;
+  --transition-medium: 0.5s ease-in-out;
+  --transition-slow: 0.9s ease-in-out;
+
+  --button-linear-gradient: linear-gradient(to right, #ffa500, #ffd447);
+  --button-linear-gradient-hover: linear-gradient(to left, #ffa500, #ffd447);
+  --button-box-shadow: inset 0px 0px 10px #ffa500,
+    0px 4px 3px rgba(0, 0, 0, 0.3);
+  --button-color: #0d1321;
+
+  --max-width-content: 1140px;
+}
+
+/* Base HTML */
+html {
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Body Styling */
+body {
+  font-family: var(--font-family-base);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: var(--line-height-base);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+a:hover,
+a:focus {
+  color: var(--color-accent);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--button-linear-gradient);
+  color: var(--button-color);
+  box-shadow: var(--button-box-shadow);
+  padding: 10px 20px;
+  border-radius: var(--border-radius-base);
+  border: none;
+  transition: background-color var(--transition-fast);
+}
+button:hover,
+button:focus {
+  background: var(--button-linear-gradient-hover);
+}
+
+/* Responsive Images */
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Form Elements Reset */
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius-base);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-primary);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 100%;
+  margin-bottom: 100px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}
+
+/* Accessibility helpers */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+}

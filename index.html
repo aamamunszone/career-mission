@@ -1,13 +1,22 @@
+<!-- ==========================================
+   Career Mission Project - HTML Landing Page Setup
+   Author: Abdullah Al Mamun (aamamunszone)
+   Purpose: Clean, scalable, maintainable code
+   ========================================== -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A beginner web developer's journey and goals."
+      content="An interactive career guidance and mission-planning web platform helping students and professionals discover suitable career paths, set goals, and track progress."
     />
-    <meta name="keywords" content="Career.io, Career Mission 2025" />
+    <meta
+      name="keywords"
+      content="Career.io, Career Mission 2025, Career Guidance"
+    />
     <meta name="author" content="Abdullah Al Mamun" />
 
     <link
@@ -26,26 +35,26 @@
     />
 
     <!-- Stylesheet -->
+    <link rel="stylesheet" href="css\global.css" />
     <link rel="stylesheet" href="css\style.css" />
     <link rel="stylesheet" href="css\responsive.css" />
   </head>
   <body>
     <!-- Header Section -->
     <header class="container header">
-      <div>
+      <nav>
         <h1 class="career-logo">
           <a href="#">Career<span>.io</span></a>
         </h1>
-        <button class="btn">Download Resume</button>
-      </div>
+        <button>Download Resume</button>
+      </nav>
     </header>
-
-    <!-- Main Section -->
 
     <!-- Banner Section -->
     <main class="container banner">
       <div class="banner-img">
         <img
+          class="text-center"
           src="assets\images\banner\hero-developer.png"
           alt="Banner Image (Hero developer)"
         />
@@ -62,13 +71,11 @@
             perspiciatis ipsum pariatur architecto eius eligendi quaerat?
           </p>
         </div>
-        <div class="banner-content-btn">
-          <button class="btn">Let's Connect</button>
+        <div>
+          <button>Let's Connect</button>
         </div>
       </div>
     </main>
-
-    <!-- Hero Section -->
 
     <!-- Blog Section -->
     <section class="container blog">
@@ -91,11 +98,11 @@
               explicabo.
             </p>
           </div>
-          <div class="blog-content-desc-btn">
-            <button class="btn">Let's Discuss</button>
+          <div>
+            <button>Let's Discuss</button>
           </div>
         </div>
-        <div class="blog-content-img">
+        <div class="blog-content-img text-center">
           <img src="assets\images\blog\working-developer.png" alt="" />
         </div>
       </div>
@@ -133,7 +140,7 @@
         <p>I will complete my targets ontime and kickstart my career.</p>
       </div>
       <div class="target-content">
-        <div class="target-card">
+        <div class="target-card card-1">
           <div class="card-img">
             <img src="assets\images\target\card\html-icon.png" alt="HTML" />
           </div>
@@ -142,7 +149,7 @@
             <a href="">Learn More</a>
           </div>
         </div>
-        <div class="target-card">
+        <div class="target-card card-2">
           <div class="card-img">
             <img src="assets\images\target\card\css-icon.png" alt="CSS" />
           </div>
@@ -151,7 +158,7 @@
             <a href="">Learn More</a>
           </div>
         </div>
-        <div class="target-card">
+        <div class="target-card card-3">
           <div class="card-img">
             <img
               src="assets\images\target\card\tailwind-icon.png"

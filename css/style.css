@@ -1,74 +1,36 @@
-* {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background: linear-gradient(to bottom right, #e6e6fa, #b8e7fa);
-}
-
-.container {
-  margin-bottom: 100px;
-}
-
-.btn {
-  font-size: 20px;
-  font-weight: 600;
-  border: none;
-  border-radius: 10px;
-  opacity: 80%;
-  padding: 17px 24px;
-  background: linear-gradient(to right, #ffa500, #ffd447);
-  box-shadow: inset 0px 0px 10px #ffa500, 0px 4px 3px rgba(0, 0, 0, 0.3);
-  color: #0d1321;
-}
-
-.btn:hover {
-  opacity: 100%;
-  background: linear-gradient(to left, #ffa500, #ffd447);
-  cursor: pointer;
-}
+/* ==========================================
+   Career Mission Project - Main CSS Setup
+   Author: Abdullah Al Mamun (aamamunszone)
+   Purpose: Clean, scalable, maintainable styles
+   ========================================== */
 
 /* Header Section */
 header {
   background-color: rgba(255, 255, 255, 0.6);
-  text-align: center;
-  width: 100%;
-  height: auto;
   border-bottom: 1px solid #c6dbff;
   padding: 24px 80px;
 }
 
-header div {
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
 }
 
-header div h1 a {
-  font-weight: bold;
-  color: #0d1321;
+nav h1 {
   font-size: 28px;
-  text-decoration: none;
 }
 
-span {
+nav h1 a span {
   display: inline-block;
-  color: #ffa500;
-  font-size: 28px;
-  transition: transform 1s ease;
+  color: var(--color-accent);
+  transition: transform var(--transition-slow);
 }
 
-span:hover {
+nav h1 a:hover span {
+  color: var(--color-primary);
   transform: translateX(35px) scale(1) perspective(500px) rotateY(360deg);
 }
-
-/* Main Section */
 
 /* Banner Section */
 .banner {
@@ -85,6 +47,21 @@ span:hover {
   padding: 40px 60px;
 }
 
+.banner-img {
+  max-width: 300px;
+}
+
+.banner-img img {
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  transition: box-shadow var(--transition-medium);
+}
+
+.banner-img img:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
 .banner-content {
   display: flex;
   flex-direction: column;
@@ -93,11 +70,24 @@ span:hover {
   gap: 32px;
 }
 
-.banner-content-desc h1 {
-  padding-bottom: 24px;
+.banner-content-desc {
+  border-radius: 16px;
+  padding: 20px;
+  transition: box-shadow var(--transition-medium);
 }
 
-/* Hero Section */
+.banner-content-desc:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content-desc h1 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.banner-content-desc p {
+  font-size: 18px;
+}
 
 /* Blog Section */
 .blog {
@@ -105,19 +95,24 @@ span:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 48px;
+  gap: 32px;
   margin-left: 80px;
   margin-right: 80px;
-  padding: 40px 60px;
 }
 
 .blog-title {
   text-align: center;
-  margin: 0px 120px;
+  margin-left: 160px;
+  margin-right: 160px;
 }
 
 .blog-title h2 {
-  margin-bottom: 24px;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.blog-title p {
+  font-size: 16px;
 }
 
 .blog-content {
@@ -127,7 +122,7 @@ span:hover {
   gap: 32px;
   border-radius: 16px;
   background-color: #e6edf9;
-  padding: 48px;
+  padding: 40px 60px;
 }
 
 .blog-content-desc {
@@ -135,14 +130,13 @@ span:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: left;
-  gap: 32px;
-  width: 50%;
+  gap: 140px;
+  max-width: 50%;
 }
 
 .blog-content-desc-title h3 {
-  margin-bottom: 16px;
   font-size: 24px;
-  font-weight: bold;
+  margin-bottom: 16px;
 }
 
 .blog-content-desc-title p {
@@ -150,11 +144,18 @@ span:hover {
 }
 
 .blog-content-img {
-  width: 50%;
+  max-width: 40%;
 }
 
 .blog-content-img img {
+  border-radius: 16px;
+  padding: 20px;
   width: 100%;
+  transition: box-shadow var(--transition-medium);
+}
+
+.blog-content-img img:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Inspiration Section */
@@ -163,33 +164,35 @@ span:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 48px;
+  gap: 32px;
   margin-left: 80px;
   margin-right: 80px;
-  padding: 40px 60px;
+  padding: 0px 60px;
 }
 
 .inspiration-title {
   text-align: center;
-  margin: 0px 120px;
+  margin-left: 160px;
+  margin-right: 160px;
 }
 
 .inspiration h2 {
-  margin-bottom: 24px;
+  font-size: 26px;
+  margin-bottom: 20px;
 }
 
 .inspiration p {
   font-family: "Azeret Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  font-size: 16px;
 }
 
 .inspiration-content {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.7);
   border-radius: 16px;
   padding: 32px;
-  width: 1066px;
-  height: 595px;
+  width: 90%;
+  height: 450px;
   text-align: center;
 }
 
@@ -197,6 +200,8 @@ span:hover {
   width: 100%;
   height: 100%;
   border-radius: 16px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Target Section */
@@ -204,19 +209,21 @@ span:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 48px;
+  gap: 32px;
   margin-left: 80px;
   margin-right: 80px;
-  padding: 40px 60px;
+  padding: 0px;
 }
 
 .target-title {
   text-align: center;
-  margin: 0px 120px;
+  margin-left: 220px;
+  margin-right: 220px;
 }
 
 .target-title h2 {
-  margin-bottom: 24px;
+  font-size: 26px;
+  margin-bottom: 20px;
 }
 
 .target-content {
@@ -227,19 +234,33 @@ span:hover {
 
 .target-card {
   display: flex;
-  justify-content: flex-start;
-  gap: 24px;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
   width: 30%;
-  height: 200px;
+  height: 180px;
+  gap: 10%;
   border-radius: 16px;
-  padding: 40px;
+  padding: 40px 10px 40px 10px;
   background: linear-gradient(to bottom, #e6edf9, #9de5ff);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+  transition: transform var(--transition-medium),
+    box-shadow var(--transition-medium);
+}
+
+.target-card:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+  box-shadow: 0px 0px 35px 5px rgba(0, 0, 0, 0.3);
+}
+
+.target-card:hover a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 7px;
 }
 
 .card-img {
-  width: 30%;
-  height: 70%;
+  max-width: 40%;
 }
 
 .card-img img {
@@ -247,8 +268,13 @@ span:hover {
   height: 100%;
 }
 
+.card-content {
+  width: 50%;
+}
+
 .card-content h3 {
-  font-size: 24px;
+  font-size: 22px;
+  padding-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -257,15 +283,15 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
   background-color: rgba(255, 255, 255, 0.6);
-  padding: 32px 150px;
+  padding: 32px 80px;
 }
 
 .footer-title h2 {
   font-family: "Azeret Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  font-size: 22px;
+  font-weight: normal;
 }
 
 .footer-content ul {
@@ -274,4 +300,8 @@ footer {
   align-items: center;
   gap: 24px;
   list-style-type: none;
+}
+
+.footer-links img {
+  max-width: 30px;
 }
